@@ -1,34 +1,45 @@
+:root {
+  /*Шрифти*/
+  --main-fons: "Roboto", sans-serif;
+  --secondary-fons: "Raleway", sans-serif;
+  /*Цвет*/
+  --main-color: #212121;
+  --complementary-color: #757575;
+  --activ-link-but: #2196f3;
+  --background-button: #f5f4fa;
+  --white: #fff;
+}
+
 body {
-  color: #212121;
-  background-color: #fff;
-  font-family: Roboto, sans-serif;
-  text-decoration: none;
+  color: var(--main-color);
+  background-color: var(--white);
+  font-family: var(--main-fons);
 }
 
 /*Стили хидера*/
 .logo-header {
-  color: #2196f3;
+  color: var(--activ-link-but);
   text-decoration: none;
-  font-family: Raleway;
+  font-family: var(--secondary-fons);
   font-size: 26px;
-  font-weight: bold;
-  line-height: 1.2px;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 }
 .logostudio-header {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-family: Raleway;
+  font-family: var(--secondary-fons);
   font-size: 26px;
-  font-weight: bold;
-  line-height: 1.2px;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 }
 .nav {
   list-style: none;
 }
 .nav-link {
-  color: #212121;
+  color: var(--main-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.15;
@@ -37,14 +48,15 @@ body {
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #2196f3;
+  color: var(--activ-link-but);
 }
 
 .contact {
   list-style: none;
 }
 .contact-link {
-  color: #757575;
+  color: var(--complementary-color);
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
@@ -52,11 +64,11 @@ body {
 }
 .contact-link:hover,
 .contact-link:focus {
-  color: #2196f3;
+  color: var(--activ-link-but);
 }
 /*Стиль слогана и кнопка заказа на странице "Студия". */
 .slogan {
-  color: #fff;
+  color: var(--white);
   background-color: #2f303a;
   font-weight: 900;
   font-size: 44px;
@@ -66,8 +78,8 @@ body {
   text-transform: uppercase;
 }
 .slogan-button {
-  color: #fff;
-  background-color: #2196f3;
+  color: var(--white);
+  background-color: var(--activ-link-but);
   width: 200px;
   height: 50px;
   left: 700px;
@@ -77,7 +89,7 @@ body {
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: #2196f3;
+  border: var(--activ-link-but);
 }
 .slogan-button:hover,
 .slogan-button:focus {
@@ -92,7 +104,7 @@ body {
 .list-plan,
 .list-tech {
   list-style: none;
-  color: #212121;
+  color: var(--main-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.7;
@@ -103,7 +115,7 @@ body {
 .list-text-time,
 .list-text-plan,
 .list-text-tech {
-  color: #757575;
+  color: var(--complementary-color);
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -113,7 +125,7 @@ body {
 .work-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -125,7 +137,7 @@ body {
 .team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -138,147 +150,59 @@ body {
 .team-subtitle-me {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
 }
 .team-text-id,
 .team-text-op,
 .team-text-np,
 .team-text-me {
-  color: #757575;
+  color: var(--complementary-color);
   font-size: 16px;
-  line-height: 1.18px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
 }
 
 /*Стиль кнопок фильтра на странице "Портфолио".*/
-.button {
-  cursor: pointer;
+.filter {
   list-style: none;
+}
+.button {
+  color: var(--main-color);
+  background-color: var(--background-button);
+  width: 150px;
+  height: 26px;
+  font-family: var(--main-fons);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
   border: none;
 }
-.filter-all {
-  color: #212121;
-  background-color: #f5f4fa;
-  width: 84px;
-  height: 26px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filter-all:hover,
-.filter-all:focus {
-  background-color: #188ce8;
-  color: #fff;
-}
-.filter-web {
-  color: #212121;
-  background-color: #f5f4fa;
-  width: 128px;
-  height: 26px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filter-web:hover,
-.filter-web:focus {
-  background-color: #188ce8;
-  color: #fff;
-}
-.filter-app {
-  color: #212121;
-  background-color: #f5f4fa;
-  width: 145px;
-  height: 26px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filter-app:hover,
-.filter-app:focus {
-  background-color: #188ce8;
-  color: #fff;
-}
-.filter-dezing {
-  color: #212121;
-  background-color: #f5f4fa;
-  width: 103px;
-  height: 26px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filter-dezing:hover,
-.filter-dezing:focus {
-  background-color: #188ce8;
-  color: #fff;
-}
-.filter-matketing {
-  color: #212121;
-  background-color: #f5f4fa;
-  width: 130px;
-  height: 26px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filter-matketing:hover,
-.filter-matketing:focus {
-  background-color: #188ce8;
-  color: #fff;
+.button:hover,
+.button:focus {
+  background-color: var(--activ-link-but);
+  color: var(--white);
 }
 
 /*Стиль текста портфолио на странице "Портфолио".*/
 .portfolio {
+  list-style: none;
+}
+.title-portfolio {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  list-style: none;
 }
-.portfolio-leptop,
-.portfolio-nba,
-.portfolio-fish,
-.portfolio-headphones,
-.portfolio-boxes,
-.portfolio-monitor,
-.portfolio-magazine,
-.portfolio-lab,
-.portfolio-app {
-  color: #757575;
+.text-portfolio {
+  color: var(--complementary-color);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -286,33 +210,35 @@ body {
 
 /*Стиль футера*/
 .logo-footer {
-  color: #2196f3;
+  color: var(--activ-link-but);
   text-decoration: none;
-  font-family: Raleway;
+  font-family: var(--secondary-fons);
   font-size: 26px;
-  line-height: 1.2px;
+  font-weight: 700;
+  line-height: 1.2;
   background-color: #2f303a;
 }
 .logostudio-footer {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  font-family: Raleway;
+  font-family: var(--secondary-fons);
   font-size: 26px;
-  line-height: 1.2px;
+  font-weight: 700;
+  line-height: 1.2;
   background-color: #2f303a;
 }
 .address {
   list-style: none;
 }
 .contactfooter-map {
-  color: #fff;
+  color: var(--white);
   font-style: normal;
   text-decoration: none;
   font-size: 14px;
   background-color: #2f303a;
 }
 .contactfooter-map:hover {
-  color: #2196f3;
+  color: var(--activ-link-but);
 }
 .contactfooter {
   color: rgba(255, 255, 255, 0.6);
@@ -322,5 +248,5 @@ body {
   background-color: #2f303a;
 }
 .contactfooter:hover {
-  color: #2196f3;
+  color: var(--activ-link-but);
 }
