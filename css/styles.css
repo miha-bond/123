@@ -10,15 +10,41 @@
   --white: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: var(--main-color);
   background-color: var(--white);
   font-family: var(--main-fons);
 }
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*Стили хидера*/
+.maine-nav {
+  display: flex;
+  align-items: center;
+}
 .logo-header {
   color: var(--activ-link-but);
+
   text-decoration: none;
   font-family: var(--secondary-fons);
   font-size: 26px;
@@ -35,11 +61,22 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
+
 .nav {
-  list-style: none;
+  display: flex;
+  margin-left: 93px;
 }
+.nav .item + .item {
+  margin-left: 50px;
+}
+
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--main-color);
+
   font-size: 14px;
   font-weight: 500;
   line-height: 1.15;
@@ -50,11 +87,18 @@ body {
 .nav-link:focus {
   color: var(--activ-link-but);
 }
-
 .contact {
+  display: flex;
   list-style: none;
+  margin-left: auto;
+}
+.contact .item + .item {
+  margin-left: 50px;
 }
 .contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--complementary-color);
   font-weight: 500;
   font-size: 14px;
@@ -68,8 +112,14 @@ body {
 }
 /*Стиль слогана и кнопка заказа на странице "Студия". */
 .slogan {
-  color: var(--white);
+  display: block;
   background-color: #2f303a;
+  text-align: center;
+}
+.slogan-text {
+  padding-top: 200px;
+  color: var(--white);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -78,11 +128,14 @@ body {
   text-transform: uppercase;
 }
 .slogan-button {
+  margin-top: 40px;
+  margin-bottom: 210px;
+
   color: var(--white);
   background-color: var(--activ-link-but);
+
   width: 200px;
   height: 50px;
-  left: 700px;
   font-size: 16px;
   line-height: 1.87;
   text-align: center;
@@ -97,31 +150,43 @@ body {
 }
 /*Стиль списка текста на странице "Студия".*/
 .content-list {
+  padding-top: 94px;
   list-style: none;
+  display: flex;
 }
-.list-warning,
-.list-time,
-.list-plan,
-.list-tech {
-  list-style: none;
-  color: var(--main-color);
+.content-list .list + .list {
+  margin-left: 30px;
+}
+.list-title {
+  text-transform: uppercase;
+  font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  line-height: 16px;
+  letter-spacing: 1.14;
 }
-.list-text-warning,
-.list-text-time,
-.list-text-plan,
-.list-text-tech {
+.list-text {
+  margin-top: 10px;
+  width: 270px;
   color: var(--complementary-color);
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
 /*Стиль заголовка на странице "Студия".*/
+.work-list {
+  margin-top: 50px;
+  display: flex;
+}
+.work-title {
+  margin-top: 94px;
+}
+.work-list .list-work + .list-work {
+  margin-left: 30px;
+  margin-bottom: 94px;
+}
 .work-title {
   font-weight: 700;
   font-size: 36px;
@@ -129,49 +194,86 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.list-work {
-  list-style: none;
-}
 
 /*Стиль заголовков и текста информации о команде на странице "Студия".*/
+.team {
+  background-color: #f5f4fa;
+}
+.team-list {
+  display: flex;
+}
 .team-title {
+  padding-top: 94px;
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }
-.team-list {
-  list-style: none;
+.foto-team-list {
+  background-color: var(--white);
+  text-align: center;
+  margin-bottom: 94px;
+  width: 270px;
+  height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
-.team-subtitle-id,
-.team-subtitle-op,
-.team-subtitle-np,
-.team-subtitle-me {
+.team-list .foto-team-list + .foto-team-list {
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+.team-subtitle {
+  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
 }
-.team-text-id,
-.team-text-op,
-.team-text-np,
-.team-text-me {
+.team-text {
+  margin-top: 10px;
   color: var(--complementary-color);
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+}
+.team-list {
+  list-style: none;
 }
 
 /*Стиль кнопок фильтра на странице "Портфолио".*/
 .filter {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
 }
+
+.filter .button {
+  margin: 8px;
+}
+.filter .button:last-child {
+  margin-right: 0;
+}
+
 .button {
+  padding: 6px 22px;
+  list-style: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+
   color: var(--main-color);
   background-color: var(--background-button);
-  width: 150px;
-  height: 26px;
+
   font-family: var(--main-fons);
   font-style: normal;
   font-weight: 500;
@@ -179,11 +281,6 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
 }
 .button:hover,
 .button:focus {
@@ -194,14 +291,33 @@ body {
 /*Стиль текста портфолио на странице "Портфолио".*/
 .portfolio {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.portfolio-list {
+  background-color: var(--white);
+  width: 370px;
+  height: 404px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+.portfolio-list:nth-child(3n) {
+  margin-right: 0;
+}
+
 .title-portfolio {
+  margin: 20px 24px 0px 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .text-portfolio {
+  margin: 4px 24px 20px 24px;
   color: var(--complementary-color);
   font-size: 16px;
   line-height: 1.87;
@@ -209,6 +325,11 @@ body {
 }
 
 /*Стиль футера*/
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+}
 .logo-footer {
   color: var(--activ-link-but);
   text-decoration: none;
@@ -216,26 +337,30 @@ body {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
-  background-color: #2f303a;
 }
 .logostudio-footer {
+  text-align: center;
   color: var(--white);
   text-decoration: none;
   font-family: var(--secondary-fons);
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
-  background-color: #2f303a;
 }
 .address {
+  margin-top: 20px;
   list-style: none;
 }
+.contact-list-footer:nth-child(2n) {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
 .contactfooter-map {
+  margin-top: 20px;
   color: var(--white);
   font-style: normal;
   text-decoration: none;
   font-size: 14px;
-  background-color: #2f303a;
 }
 .contactfooter-map:hover {
   color: var(--activ-link-but);
@@ -245,7 +370,6 @@ body {
   font-style: normal;
   text-decoration: none;
   font-size: 14px;
-  background-color: #2f303a;
 }
 .contactfooter:hover {
   color: var(--activ-link-but);
